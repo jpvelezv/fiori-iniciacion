@@ -10,6 +10,17 @@
     "title": "{{appTitle}}",
     "description": "{{appDescription}}",
     "resources": "resources.json",
+    "dataSources": {
+      "mainService": {
+        "uri": "/V2/Northwind/Northwind.svc/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/mainService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    },
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.17.3",
@@ -51,6 +62,11 @@
         "settings": {
           "bundleName": "logaligroup.invoices.i18n.i18n"
         }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
       }
     },
     "resources": {
@@ -70,7 +86,7 @@
         "viewType": "XML",
         "path": "logaligroup.invoices.view",
         "async": true,
-        "viewPath": "logaligroup.invoices.view"
+        "viewPath": "invoices.view"
       },
       "routes": [
         {
