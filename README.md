@@ -1,2 +1,2 @@
-# fiori-iniciacion
-Fiori SAPUI5 Iniciación
+# fiori
+Fiori SAPUI5
